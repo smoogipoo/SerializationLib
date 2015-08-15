@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+  	<releaseNotes>Initial release.</releaseNotes>
+
+    <id>SerializationLib</id>
+    <version>1.0.0</version>
+
+    <authors>smoogipooo</authors>
+    <owners>smoogipooo</owners>
+    <copyright>Copyright smoogipooo 2015</copyright>
+
+    <title>SerializationLib</title>
+    <summary>A serialization library to assist with serializing data to and from streams. The library can serialize all primitive types (char, int, bool, float, double, etc), arrays/lists/dictionaries, and complex objects such as arrays of serializable objects where objects can contain other serializable objects. Uses BinaryBitLib to read and write data.</summary>
+    <description>A serialization library to assist with serializing data to and from streams. The library can serialize all primitive types (char, int, bool, float, double, etc), arrays/lists/dictionaries, and complex objects such as arrays of serializable objects where objects can contain other serializable objects. Uses BinaryBitLib to read and write data.</description>
+
+    <licenseUrl>https://github.com/smoogipooo/SerializationLib</licenseUrl>
+    <projectUrl>https://github.com/smoogipooo/SerializationLib</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+
+    <tags>Serialization SerializationReader SerializationWriter Serialize Serializer</tags>
+    
+    <dependencies>
+  	  <dependency id="BinaryBitLib" version="1.2.3" />
+    </dependencies>
+  </metadata>
+
+  <files>
+  	<file src="bin\$configuration$\SerializationLib.dll" target="lib\net35\" />
+  </files>
+</package>
