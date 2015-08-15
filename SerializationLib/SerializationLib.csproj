@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BinaryBitLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BinaryBitLib.1.2.3\lib\net20\BinaryBitLib.dll</HintPath>
+      <HintPath>..\packages\BinaryBitLib.1.2.4\lib\net20\BinaryBitLib.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />

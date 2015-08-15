@@ -33,6 +33,9 @@ namespace SerializationLib
         {
             SerializationTypes serType = (SerializationTypes)reader.ReadByte();
 
+            if (serType == SerializationTypes.None)
+                return default(T);
+
             if (serType == SerializationTypes.SerializableType)
             {
                 T instance = (T)Activator.CreateInstance<T>();

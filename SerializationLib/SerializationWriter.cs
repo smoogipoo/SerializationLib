@@ -34,6 +34,9 @@ namespace SerializationLib
         /// <param name="value">The value to write.</param>
         public void Write<T>(T value)
         {
+            if (value == null)
+                return;
+
             writeType(typeof(T));
             write(typeof(T), value);
         }

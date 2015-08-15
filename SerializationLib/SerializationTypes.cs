@@ -6,6 +6,8 @@ namespace SerializationLib
 {
     internal enum SerializationTypes : byte
     {
+        None,
+
         BoolType,
         ByteType,
         CharType,

@@ -35,7 +35,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SerializationLib">
+    <Reference Include="SerializationLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\SerializationLib\bin\Debug\SerializationLib.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -59,6 +60,7 @@
     <Compile Include="EnumTests.cs" />
     <Compile Include="StringTests.cs" />
     <Compile Include="ArrayTests.cs" />
+    <Compile Include="RangeTests.cs" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package >
   <metadata>
-  	<releaseNotes>Initial release.</releaseNotes>
+  	<releaseNotes>Fix errors in cases where the stream read occurs out of range or a null value is written.</releaseNotes>
 
     <id>SerializationLib</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 
     <authors>smoogipooo</authors>
     <owners>smoogipooo</owners>
