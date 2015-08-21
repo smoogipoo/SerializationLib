@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package >
   <metadata>
-  	<releaseNotes>Read enums as ints to cover object read cases.</releaseNotes>
+  	<releaseNotes>More enum fixes and update BBL.</releaseNotes>
 
     <id>SerializationLib</id>
-    <version>1.0.8</version>
+    <version>1.0.9</version>
 
     <authors>smoogipooo</authors>
     <owners>smoogipooo</owners>
@@ -21,7 +21,7 @@
     <tags>Serialization SerializationReader SerializationWriter Serialize Serializer</tags>
     
     <dependencies>
-  	  <dependency id="BinaryBitLib" version="1.2.4" />
+  	  <dependency id="BinaryBitLib" version="1.2.6" />
     </dependencies>
   </metadata>
 
