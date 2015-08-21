@@ -12,9 +12,6 @@ namespace SerializationLibTests
         public void TestByteEnum()
         {
             testEnum<ByteEnum>();
-            testEnum<ShortEnum>();
-            testEnum<IntEnum>();
-            testEnum<LongEnum>();
         }
 
         [TestMethod]
@@ -67,8 +64,7 @@ namespace SerializationLibTests
             e = 1 << 3,
             f = 1 << 4,
             g = 1 << 5,
-            h = 1 << 6,
-            i = 1 << 7
+            h = 1 << 6
         }
 
         [Flags]
