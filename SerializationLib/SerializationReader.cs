@@ -74,11 +74,20 @@ namespace SerializationLib
                     return reader.ReadString();
                 case SerializationTypes.EnumType:
                     {
-                        int size = SizeOfHelper.SizeOf(type);
-                        if (size > 4)
-                            return Enum.ToObject(type, reader.ReadLong(size * 8));
-                        else
-                            return Enum.ToObject(type, reader.ReadInt(size * 8));
+                        int size = reader.ReadInt(4);
+                        switch (size)
+                        {
+                            case 1:
+                                return (byte)reader.ReadInt(size * 8);
+                            case 2:
+                                return (short)reader.ReadInt(size * 8);
+                            case 4:
+                                return (int)reader.ReadInt(size * 8);
+                            case 8:
+                                return (long)reader.ReadInt(size * 8);
+                        }
+
+                        return 0;
                     }
                 case SerializationTypes.ArrayType:
                     {

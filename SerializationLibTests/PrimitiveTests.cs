@@ -251,18 +251,30 @@ namespace SerializationLibTests
             using (SerializationWriter sw = new SerializationWriter(ms))
             using (SerializationReader sr = new SerializationReader(ms))
             {
-                object[] values = new object[Config.MULTI_TEST_COUNT];
-                for (int i = 0; i < Config.MULTI_TEST_COUNT; i++)
-                {
-                    values[i] = rand.Next(int.MinValue, int.MaxValue);
-                    sw.Write(values[i]);
-                }
+                object[] values = new object[6];
+                values[0] = rand.Next(int.MinValue, int.MaxValue);
+                values[1] = "test";
+                values[2] = EnumTests.ByteEnum.h;
+                values[3] = 0.0002f;
+                values[4] = 0.1234d;
+                values[5] = (decimal)1000;
+                sw.Write(values[0]);
+                sw.Write(values[1]);
+                sw.Write(values[2]);
+                sw.Write(values[3]);
+                sw.Write(values[4]);
+                sw.Write(values[5]);
 
                 sw.Flush();
                 ms.Position = 0;
 
-                for (int i = 0; i < Config.MULTI_TEST_COUNT; i++)
-                    Assert.AreEqual((int)values[i], (int)sr.Read<object>());
+                for (int i = 0; i < values.Length; i++)
+                {
+                    if (i == 2)
+                        Assert.AreEqual(values[i], (EnumTests.ByteEnum)sr.Read<object>());
+                    else
+                        Assert.AreEqual(values[i], sr.Read<object>());
+                }
             }
         }
     }

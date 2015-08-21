@@ -100,6 +100,7 @@ namespace SerializationLib
             else if (type.IsEnum)
             {
                 int size = SizeOfHelper.SizeOf(type);
+                writer.WriteInt(size, 4);
                 if (size > 4)
                     writer.WriteLong(Convert.ToInt64(value), size * 8);
                 else

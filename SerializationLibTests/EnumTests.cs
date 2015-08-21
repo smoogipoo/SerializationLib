@@ -58,7 +58,7 @@ namespace SerializationLibTests
         }
 
         [Flags]
-        private enum ByteEnum : byte
+        public enum ByteEnum : byte
         {
             a = 0,
             b = 1 << 0,
