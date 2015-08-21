@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package >
   <metadata>
-  	<releaseNotes>Fix errors in cases where the stream read occurs out of range or a null value is written.</releaseNotes>
+  	<releaseNotes>Fix not building in Release (woops).</releaseNotes>
 
     <id>SerializationLib</id>
-    <version>1.0.2</version>
+    <version>1.0.5</version>
 
     <authors>smoogipooo</authors>
     <owners>smoogipooo</owners>
@@ -21,7 +21,7 @@
     <tags>Serialization SerializationReader SerializationWriter Serialize Serializer</tags>
     
     <dependencies>
-  	  <dependency id="BinaryBitLib" version="1.2.3" />
+  	  <dependency id="BinaryBitLib" version="1.2.4" />
     </dependencies>
   </metadata>
 
