@@ -4,7 +4,7 @@
   	<releaseNotes>Fix errors in cases where the stream read occurs out of range or a null value is written.</releaseNotes>
 
     <id>SerializationLib</id>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
 
     <authors>smoogipooo</authors>
     <owners>smoogipooo</owners>

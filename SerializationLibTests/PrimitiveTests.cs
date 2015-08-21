@@ -6,7 +6,7 @@ using SerializationLib;
 namespace SerializationLibTests
 {
     [TestClass]
-    public class IntegralTests
+    public class PrimitiveTests
     {
         [TestMethod]
         public void TestBools()
@@ -239,6 +239,30 @@ namespace SerializationLibTests
 
                 for (int i = 0; i < Config.MULTI_TEST_COUNT; i++)
                     Assert.AreEqual(values[i], sr.Read<DateTime>());
+            }
+        }
+
+        [TestMethod]
+        public void TestObjects()
+        {
+            Random rand = new Random();
+
+            using (MemoryStream ms = new MemoryStream())
+            using (SerializationWriter sw = new SerializationWriter(ms))
+            using (SerializationReader sr = new SerializationReader(ms))
+            {
+                object[] values = new object[Config.MULTI_TEST_COUNT];
+                for (int i = 0; i < Config.MULTI_TEST_COUNT; i++)
+                {
+                    values[i] = rand.Next(int.MinValue, int.MaxValue);
+                    sw.Write(values[i]);
+                }
+
+                sw.Flush();
+                ms.Position = 0;
+
+                for (int i = 0; i < Config.MULTI_TEST_COUNT; i++)
+                    Assert.AreEqual((int)values[i], (int)sr.Read<object>());
             }
         }
     }

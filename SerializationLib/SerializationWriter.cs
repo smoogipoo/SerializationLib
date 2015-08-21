@@ -37,8 +37,8 @@ namespace SerializationLib
             if (value == null)
                 return;
 
-            writeType(typeof(T));
-            write(typeof(T), value);
+            writeType(value.GetType());
+            write(value.GetType(), value);
         }
 
         private void writeType(Type type)
