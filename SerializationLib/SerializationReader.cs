@@ -74,7 +74,7 @@ namespace SerializationLib
                     return reader.ReadString();
                 case SerializationTypes.EnumType:
                     {
-                        int size = reader.ReadInt(4);
+                        int size = (int)reader.ReadUInt(4);
                         switch (size)
                         {
                             case 1:
@@ -84,7 +84,7 @@ namespace SerializationLib
                             case 4:
                                 return (int)reader.ReadInt(size * 8);
                             case 8:
-                                return (long)reader.ReadInt(size * 8);
+                                return (long)reader.ReadLong(size * 8);
                         }
 
                         return 0;
