@@ -4,7 +4,7 @@
   	<releaseNotes>Read enums as ints to cover object read cases.</releaseNotes>
 
     <id>SerializationLib</id>
-    <version>1.0.7</version>
+    <version>1.0.8</version>
 
     <authors>smoogipooo</authors>
     <owners>smoogipooo</owners>
